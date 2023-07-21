@@ -1,0 +1,28 @@
+section.lodgingList {
+    position: relative;
+    width: 100%;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    margin: 30px auto;
+
+    @media screen and (max-width: 768px) {
+        background-color: rgba(0, 0, 0, 0);
+        margin: 10px auto;
+    }
+
+    & .cardList {
+        display:flex;
+        flex-wrap: wrap;
+        position: relative;
+        margin: auto;
+        padding: 2% 0 2% 0;
+        width: 98%;
+        @media screen and (max-width: 768px) {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            padding: 0;
+        }
+    }
+
+
+    }

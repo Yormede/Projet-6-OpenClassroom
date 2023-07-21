@@ -1,15 +1,14 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import "./_card.scss"
 
 const Card = (props) => {
 
     return (
-        <Link to={props.id}>
-        <figure id={props.id}>
+        <Link to={props.id} className='cardFigure' id={props.id}>
             <div></div>
             <img src={props.cover} alt={props.title} />
-            <figcaption>{props.title}</figcaption>
-        </figure>
+            <figcaption className='figCaption'>{props.title}</figcaption>
         </Link>
     );
 };
