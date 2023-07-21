@@ -1,0 +1,36 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+
+  & img {
+    width: 210px;
+    @media screen and (max-width: 768px) {
+      width: 145px;
+    }
+  }
+
+  & nav ul {
+    list-style: none;
+    display: flex;
+
+    & a {
+      text-decoration: none;
+    }
+
+    & li {
+      text-decoration: none !important;
+      color: #ff6060;
+      padding: 5px 10px;
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 768px) {
+        li {
+            font-size: 12px;
+        }
+
+    }
+  }
+}
