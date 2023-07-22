@@ -4,7 +4,6 @@ import './_collapse.scss'
 const Collapse = (props) => {
   const [underCollapse, setOpen] = useState('hidden')
   const [rotation, rotate] = useState('')
-
   return (
     <div className="collapseParent">
       <div className="collapse">
@@ -16,7 +15,9 @@ const Collapse = (props) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           onClick={() => {
-            underCollapse === 'hidden'
+            underCollapse === 'hidden' && props.data instanceof Array
+              ? setOpen('displayedGreat')
+              : underCollapse === 'hidden'
               ? setOpen('displayed')
               : setOpen('hidden')
             underCollapse === 'hidden' ? rotate('rotate') : rotate('')
@@ -30,12 +31,13 @@ const Collapse = (props) => {
         </svg>
       </div>
       <div className={underCollapse + ' openedCollapse'}>
-        {/* {props.map((x) => (
-             <p>{x}</p>
-          ))} */}
-        <p>
-          {props.description}
-        </p>
+        {props.data instanceof Array ? (
+          props.data.map((x) => {
+            return <p key={x}>{x}</p>
+          })
+        ) : (
+          <p>{props.data}</p>
+        )}
       </div>
     </div>
   )
