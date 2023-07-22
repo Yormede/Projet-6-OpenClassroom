@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Lodging = () => {
+const Lodging = (props) => {
     return (
         <div>
-            
+            <p>Hello World</p>
         </div>
     );
 };

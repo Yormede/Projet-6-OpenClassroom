@@ -5,8 +5,11 @@ import './styles/_App.scss';
 import Home from './page/Home';
 import About from './page/About';
 import Error from './page/Error';
+import {getData} from './data';
+import Lodging from './page/Lodging';
 
 function App() {
+  const data = getData();
   return (
     <>
     <BrowserRouter>
@@ -16,6 +19,9 @@ function App() {
        <Route path='/' element={<Home/>}/>
        <Route path="about" element={<About/>}/>
        <Route path='*' element={<Error/>}/>
+       {data.map((x) =>
+        <Route key={x.id} path={x.id} element={<Lodging key={x.id} data={x}/>}/>
+        )}
     </Routes>
     </div>
     <Footer />

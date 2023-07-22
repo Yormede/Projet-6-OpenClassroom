@@ -1,6 +1,6 @@
 import './_lodgingList.scss'
 import React from 'react'
-import { getData } from './data.js'
+import { getData } from '../../data'
 import Card from '../card/Card'
 
 const LodgingList = () => {

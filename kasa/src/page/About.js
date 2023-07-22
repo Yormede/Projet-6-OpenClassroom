@@ -1,10 +1,16 @@
 import React from 'react'
+import Collapse from '../components/collapse/Collapse'
+import { getDataAbout } from '../data'
 
 const About = () => {
+  const data = getDataAbout()
+  console.log(data)
   return (
-    <div>
-      <p>About World !</p>
-    </div>
+    <main>
+       {data.map((x) => (
+             <Collapse key={x.id} title={x.title} description={x.description} equip="true"/>
+          ))} 
+    </main>
   )
 }
 
