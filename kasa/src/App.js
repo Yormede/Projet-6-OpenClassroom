@@ -9,7 +9,8 @@ import {getData} from './data';
 import Lodging from './page/Lodging';
 
 function App() {
-  const data = getData();
+  const data = getData()
+
   return (
     <>
     <BrowserRouter>

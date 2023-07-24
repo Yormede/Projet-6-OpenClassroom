@@ -1,6 +1,16 @@
 .stars {
 width: 196px;
 margin-top: 10px;
-    & img {
+& img {
+    margin-right: 7px;
+    width: 36px;
+    @media screen and (max-width: 768px) {
+        width: 22px;
+        margin-top: 0px;
+
     }
+}
+@media screen and (max-width: 768px) {
+    margin-top: 0px;
+}
 }

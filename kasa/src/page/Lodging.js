@@ -20,7 +20,7 @@ const Lodging = (props) => {
           </div>
         </div>
         <div className="hostInformation">
-          <div>
+          <div className='hostNameAndPicture'>
             <p>
               {props.data.host.name.split(' ').map((x, z) => (
                 <React.Fragment key={z}>
