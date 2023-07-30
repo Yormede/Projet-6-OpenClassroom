@@ -21,7 +21,7 @@ function App() {
        <Route path="about" element={<About/>}/>
        <Route path='*' element={<Error/>}/>
        {data.map((x) =>
-        <Route key={x.id} path={x.id} element={<Lodging key={x.id} data={x}/>}/>
+        <Route key={x.id} path={"logement/"+x.id} element={<Lodging key={x.id} data={x}/>}/>
         )}
     </Routes>
     </div>
